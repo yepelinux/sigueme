@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
+	<mx:states>
+		<mx:State name="estado2">
+			<mx:SetProperty target="{panel1}" name="height" value="316"/>
+		</mx:State>
+	</mx:states>
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			
+			private function ver():void {
+				Alert.show('Hola mundo2');
+				currentState='estado2';
+			}
+		]]>
+	</mx:Script>
+	<mx:Panel x="10" y="10" width="456" height="152" layout="absolute" title="Boludeces" borderColor="#ff0000" id="panel1">
+		<mx:Button label="Saludar" click="{ver()}" right="0" bottom="0" id="button1"/>
+	</mx:Panel>	
+</mx:Application>
